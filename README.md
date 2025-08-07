@@ -18,14 +18,14 @@ This project is a web-based system designed to detect and prevent fraudulent act
  - **Database**: MySQL
  - **Tools**: JIRA (project management), Postman (API testing), SonarQube (static analysis, planned)
  - **Authentication**: JWT, bcrypt
-<!--
+
 ## Installation
 
  1. **Clone the Repository:**
 
         git clone https://github.com/Madhvesh-Patel3241/assignment-fraud-detection.git
         cd fraud-detection-classroom
-
+<!--
  2. **Backend Setup:**
 
  - Configure MySQL database (see Database Schema below).
