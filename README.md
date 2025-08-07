@@ -10,7 +10,7 @@ This project is a web-based system designed to detect and prevent fraudulent act
  - **File Upload Management**: Supports multiple file uploads with validation and organization by class.
  - **User Authentication**: Secure registration, login, and admin CRUD operations using JWT.
  - **Visual Dashboard**: Displays plagiarism results with graphs and charts.
-<!--
+
 ## Tech Stack
 
  - **Frontend**: AngularJS, Bootstrap
@@ -18,7 +18,7 @@ This project is a web-based system designed to detect and prevent fraudulent act
  - **Database**: MySQL
  - **Tools**: JIRA (project management), Postman (API testing), SonarQube (static analysis, planned)
  - **Authentication**: JWT, bcrypt
-
+<!--
 ## Installation
 
  1. **Clone the Repository:**
