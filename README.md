@@ -32,7 +32,7 @@ This project is a web-based system designed to detect and prevent fraudulent act
  - Run the Flask server:
 
         python app.py
-<!--
+
 3. **Frontend Setup:**
  - Install npm dependencies:
 
@@ -41,7 +41,7 @@ This project is a web-based system designed to detect and prevent fraudulent act
  - Start the AngularJS app:
 
        ng serve
-
+<!--
 4. **Environment Variables:**
 
  - Create a .env file in the backend root with:
