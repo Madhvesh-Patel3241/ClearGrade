@@ -51,7 +51,7 @@ This project is a web-based system designed to detect and prevent fraudulent act
        MYSQL_PASSWORD=your_password
        MYSQL_DB=plagiarism_checker
        JWT_SECRET_KEY=your_secret_key
-<!--
+
  ## Database Schema
 
  The project uses a MySQL database with the following tables:
@@ -79,7 +79,7 @@ This project is a web-based system designed to detect and prevent fraudulent act
         password VARCHAR(255) NOT NULL
     );
 
-
+<!--
  ## Usage
 
  1. Register or log in as a user/admin.
