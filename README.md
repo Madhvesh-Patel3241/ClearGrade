@@ -79,7 +79,7 @@ This project is a web-based system designed to detect and prevent fraudulent act
         password VARCHAR(255) NOT NULL
     );
 
-<!--
+
  ## Usage
 
  1. Register or log in as a user/admin.
@@ -87,7 +87,7 @@ This project is a web-based system designed to detect and prevent fraudulent act
  3. View plagiarism detection results and fraud reports.
  4. Admins can manage users and configure similarity thresholds.
 
-
+<!-- 
 ## Screenshots
 
  - Login Page:
