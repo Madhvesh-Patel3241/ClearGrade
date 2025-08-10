@@ -87,13 +87,13 @@ This project is a web-based system designed to detect and prevent fraudulent act
  3. View plagiarism detection results and fraud reports.
  4. Admins can manage users and configure similarity thresholds.
 
-<!-- 
+
 ## Screenshots
 
  - Login Page:
    
    <img width="1892" height="893" alt="Screenshot 2025-08-01 190246" src="https://github.com/user-attachments/assets/9d8495fb-bfa8-4e25-af52-376d94725a9b" />
-
+<!-- 
  - Register Page:
 
    <img width="1888" height="892" alt="Screenshot 2025-08-01 190307" src="https://github.com/user-attachments/assets/cda588a1-aa8c-4bc8-8489-ba8b4ee15af2" />
