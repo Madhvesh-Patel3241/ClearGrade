@@ -110,10 +110,11 @@ This project is a web-based system designed to detect and prevent fraudulent act
 
       <img width="1897" height="890" alt="Screenshot 2025-08-01 190227" src="https://github.com/user-attachments/assets/2ef36990-8d16-4450-9291-49229ddcf2c8" />
 
-<!--
+
 ## Future Enhancements
  - Integrate machine learning for advanced plagiarism detection.
  - Optimise performance for large datasets.
+  <!-- 
  - Implement full CI/CD pipelines with Jenkins.
  - Add support for multiple courses/institutions.
 
