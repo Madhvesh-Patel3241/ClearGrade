@@ -105,6 +105,7 @@ This project is a web-based system designed to detect and prevent fraudulent act
 - About Page:
   
    <img width="1882" height="892" alt="Screenshot 2025-08-14 122633" src="https://github.com/user-attachments/assets/6e6765c8-bf6c-420a-b134-f6781593f34f" />
+   <img width="1884" height="708" alt="Screenshot 2025-08-14 124010(1)" src="https://github.com/user-attachments/assets/2d3006b9-3b1f-438f-b193-cf3830a89103" />
 
 - Plagiarism Dashboard:
 
