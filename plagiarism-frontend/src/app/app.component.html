@@ -1,0 +1,52 @@
+<!-- <img src= "assets/Logo.png" class="center" width="200" height="80" display:block> -->
+<nav *ngIf="showNavbar">
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs nav">
+	<li [ngbNavItem]="1" (click)="navigateTo('/home')">
+		<button ngbNavLink>ClearGrade</button>
+		<ng-template ngbNavContent>
+		<div>
+			<!-- <app-home></app-home> -->
+		</div>
+		</ng-template>
+	</li>
+	<li [ngbNavItem]="5" (click)="navigateTo('/about')">
+		<button ngbNavLink>About Us</button>
+		<ng-template ngbNavContent>
+			
+		</ng-template>
+	</li>
+	<li [ngbNavItem]="2" (click)="navigateTo('/detect')">
+		<button ngbNavLink>Check Assignment Fraud</button>
+		<ng-template ngbNavContent>
+			<!-- <app-detect></app-detect> -->
+		</ng-template>
+	</li>
+	<li [ngbNavItem]="3" (click)="navigateTo('/reports')">
+		<button ngbNavLink>Report</button>
+		<ng-template ngbNavContent>
+			
+		</ng-template>
+	</li>
+	
+	<div class="ms-auto" *ngIf="showNavbar">
+	<li [ngbNavItem]="4" (click)="logout()" class="">
+		<button ngbNavLink>Logout</button>
+		<ng-template ngbNavContent>
+			
+		</ng-template>
+	</li>
+	</div>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+</nav>
+
+<!-- <pre>Active: {{ active }}</pre> -->
+<!-- <nav>
+  <a routerLink="/upload" routerLinkActive="active">Upload File</a> |
+  <a routerLink="/results" routerLinkActive="active">View Results</a>
+</nav>
+<h1>Hello! Welcome to the Hello-World tutorial</h1> -->
+<!-- <app-home></app-home> -->
+
+<router-outlet></router-outlet>

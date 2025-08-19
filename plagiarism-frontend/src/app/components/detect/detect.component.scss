@@ -1,0 +1,51 @@
+.results-container {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .high-severity {
+    background-color: #ff6b6b;
+    color: white;
+  }
+  
+  .medium-severity {
+    background-color: #ffd166;
+  }
+  
+  .low-severity {
+    background-color: #06d6a0;
+    color: white;
+  }
+  
+  .table-danger {
+    background-color: rgba(255, 107, 107, 0.1);
+  }
+  
+  .spinner-border {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-width: 0.15em;
+  }
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; // Adjust this based on your container's height
+  }
+  
+  .spinner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // Optional: Ensure the spinner itself is styled appropriately
+  mat-spinner {
+    margin: 0 auto; // Additional centering for horizontal alignment
+  }

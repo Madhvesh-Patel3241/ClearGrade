@@ -1,0 +1,168 @@
+/* Import Animate.css for animations */
+// @import '~animate.css/animate.min.css';
+
+.page-wrapper {
+  background: linear-gradient(to bottom, #e3f2fd 0%, #ffffff 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #1480f4 0%, #0056b3 100%);
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  opacity: 0.3;
+}
+
+.hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.text-white {
+  color: #fff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.text-light {
+  color: #e0f7fa !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.text-primary {
+  color: #007bff !important;
+}
+
+.text-muted {
+  color: #607d8b !important;
+}
+
+.cta-btn {
+  padding: 14px 50px;
+  font-size: 18px;
+  margin: 15px;
+  background: linear-gradient(45deg, #fbfbfb, #fefefe);
+  color: #fff;
+  border-radius: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.explore-btn {
+  padding: 14px 50px;
+  font-size: 18px;
+  margin: 15px;
+  background: linear-gradient(45deg, #fbfbfb, #fefefe);
+  color: #fff;
+  border-radius: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.features-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.feature-card {
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+}
+
+.feature-icon {
+  font-size: 50px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.how-it-works-section {
+  padding: 30px 20px;
+  background: #f5f7fa;
+  text-align: center;
+}
+
+.how-it-works-card {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cta-banner {
+  background: linear-gradient(135deg, #1480f4 0%, #0056b3 100%);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  opacity: 0.3;
+}
+
+.footer {
+  padding: 30px;
+  background: linear-gradient(to top, #263238, #37474f);
+  color: #fff;
+}
+
+.footer-links {
+  margin-top: 15px;
+}
+
+.footer-link {
+  color: #b0bec5;
+  margin: 0 20px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+}

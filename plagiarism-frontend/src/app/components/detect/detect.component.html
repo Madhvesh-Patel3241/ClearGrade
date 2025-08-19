@@ -1,0 +1,144 @@
+<div class="container-fluid vh-100 d-flex">
+  <!-- Left Side: File Upload Section -->
+  <div class="col-md-6 d-flex align-items-center justify-content-center bg-light p-5">
+    <div class="card shadow-lg p-4 rounded-4 w-75">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold text-primary">Upload Assignment</h2>
+        <p class="text-muted">Submit files for fraud detection.</p>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Choose Files</label>
+        <div class="input-group">
+          <input 
+            type="file" 
+            class="form-control" 
+            multiple 
+            (change)="onFileSelected($event)"
+            accept=".pdf,.docx,.txt" 
+          />
+          <button 
+            class="btn btn-primary fw-semibold" 
+            type="button" 
+            (click)="uploadFiles()"
+            [disabled]="!selectedFiles.length"
+          >
+            Upload
+          </button>
+        </div>
+      </div>
+
+      <div class="text-center mt-3">
+        <!-- <button class="btn btn-danger fw-semibold px-4">Detect</button> -->
+        <button 
+        class="btn btn-danger px-4" 
+        (click)="detectPlagiarism()"
+        [disabled]="isLoading"
+        [disabled]="isupload"
+      >
+        <span *ngIf="!isLoading">Detect</span>
+        <span *ngIf="isLoading" class="spinner-border spinner-border-sm"></span>
+      </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Side: Fraud Detection Results -->
+  <div class="col-md-6 d-flex align-items-center justify-content-center bg-white p-5">
+    <div class="card shadow-lg p-4 rounded-4 w-100 h-100">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold text-danger">Assignment Fraud Report</h2>
+        <p class="text-muted">Average similarity against other submissions</p>
+      </div>
+
+      
+
+      <!-- Progress Bar when loading -->
+      <div *ngIf="isLoading" class="text-center py-4">
+        <div class="progress mb-3" style="height: 20px;">
+          <div 
+            class="progress-bar progress-bar-striped progress-bar-animated bg-primary" 
+            role="progressbar" 
+            [style.width]="progressPercentage + '%'" 
+            [attr.aria-valuenow]="progressPercentage" 
+            aria-valuemin="0" 
+            aria-valuemax="100"
+          > </div>
+        </div>
+        {{ progressPercentage }}%
+        
+        <p class="mt-2">Analyzing documents...</p>
+        <div *ngIf="isLoading" class="text-center py-4">
+          <div class="spinner-border text-primary"></div>
+          <!-- <p class="mt-2">Analyzing documents...</p> -->
+        </div>
+      </div>
+
+      <div *ngIf="results.length > 0 && !isLoading" class="results-container">
+        <!-- Download Report Button -->
+        <div class="text-end">
+          <button 
+            class="btn btn-success" 
+            (click)="downloadReport()"
+          >
+            Download Report (Excel)
+          </button>
+        </div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>File Name</th>
+              <th>Avg Similarity</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let result of results" [class.table-danger]="result.average_similarity >= 0.7">
+              <td>{{ result.filename }}</td>
+              <td>
+                <span class="badge" [ngClass]="getSeverityClass(result.average_similarity)">
+                  {{ formatPercent(result.average_similarity) }}
+                </span>
+              </td>
+              <td>
+                <button 
+                  class="btn btn-sm btn-outline-primary" 
+                  (click)="toggleDetails(result.file_id)"
+                >
+                  {{ showDetails[result.file_id] ? 'Hide' : 'Show' }}
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        
+
+        <!-- Detailed Comparisons -->
+        <div *ngFor="let result of results" class="mt-4" [hidden]="!showDetails[result.file_id]">
+          <h5>Detailed comparison for <strong>{{ result.filename }}</strong></h5>
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered">
+              <thead>
+                <tr>
+                  <th>Compared To</th>
+                  <th>Similarity Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let detail of result.details" [ngClass]="getSeverityClass(detail.score)">
+                  <td>{{ detail.compared_to }}</td>
+                  <td>{{ formatPercent(detail.score) }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="results.length === 0 && !isLoading" class="alert alert-info">
+        <p class="mb-0">No results yet. Upload files and click "Detect".</p>
+      </div>
+    </div>
+  </div>
+</div>
